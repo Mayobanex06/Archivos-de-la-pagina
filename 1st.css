@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-text{
+    color: #0B3C5D;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.logo-image{
+  width: 50px;
+}
+
+.menu{
+    display: flex;
+    gap: 28px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #1E73BE; 
+    font-weight: 500px; 
+    font-size: 14px;
+}
+
+.iconos{
+    display: flex; 
+    align-items: center;
+    gap: 18px;
+    font-size: 18px; 
+    cursor: pointer; 
+}
+
+.icono1 {
+  position: relative;
+}
+
+.contenido1{
+  background-color: #DCE6EF;
+  width: 100%;
+  height: 700px; 
+  
+}
+
+.text-container{
+  
+  width: 100%;
+  height: 700px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   
+  align-items: flex-start; 
+  padding-left: 80px; 
+  position: relative;
+
+}
+
+.badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 14px;
+  border-radius: 999px;
+
+  background: #EFF6FF;       
+  border: 1px solid #DBEAFE; 
+  color: #1E73BE;             
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  
+}
+
+
+.main-h1{
+  width: 600px;
+  font-size: 50px;   
+  text-align: left;
+}
+
+.h1-text2{
+color:#1E73BE;
+}
+
+.p-text1{
+
+  color:#1E73BE;
+  font-size: 18px;   
+  max-width: 520px; 
+  line-height: 1.6;
+  text-align: left;
+}
+
+.button1 {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 28px;
+  border-radius: 999px;
+
+  background: #1E73BE;  
+  color: #ffffff;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(79, 107, 255, 0.35);
+  transition: all 0.3s ease;
+}
+
+.image1{
+  position: absolute;
+
+  top: 1px;     
+  right: 80px;    
+
+  width: 1150px;   
+  max-width: 100%;
+
+  height: 100%;
+  
+}
