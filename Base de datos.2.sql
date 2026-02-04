@@ -2,7 +2,6 @@
 CREATE DATABASE IF NOT EXISTS tienda_celulares;
 USE tienda_celulares;
 
--- 2. Tabla de Usuarios
 CREATE TABLE usuarios (
     id_usuarios INT AUTO_INCREMENT PRIMARY KEY,
     nombre_completo VARCHAR(100) NOT NULL,
@@ -33,3 +32,21 @@ CREATE TABLE ventas (
     FOREIGN KEY (id_usuarios) REFERENCES usuarios(id_usuarios),
     FOREIGN KEY (id_celulares) REFERENCES inventario_celulares(id_celulares)
 );
+(DELIMITER //
+CREATE TRIGGER actualizar_stock_venta
+AFTER INSERT ON ventas
+FOR EACH ROW
+BEGIN
+UPDATE invetario_celulares
+SET estado_stock = 'vendido'
+WHERE id_celuares = NEW.id_celulares;
+END //
+DELIMITER //)
+
+CREATE VIEW reporte_diario AS
+SELECT
+DATE(fecha_venta) as fecha,
+COUNT(id_ventas) as Equipos_Vendidos,
+SUM(precio_final) as Total_caja
+FROM ventas
+GROUP BY DATE (fecha_venta);
